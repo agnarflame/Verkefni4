@@ -1,0 +1,218 @@
+/* Reset og border-box á allt */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Leturgerðir */
+
+/** Hér skal skilgreina leturgerðir **/
+
+/* Stillingar */
+
+:root {
+  /* Grunn bilið okkar er 1rem == 16px */
+  --font-base-body-px: 16px;
+  --spacing: 1rem;
+
+  /* Hámarksbreidd á efni */
+  --max-width: 900px;
+
+  /* Border breiddir */
+  --border-small: 1px;
+  --border-large: 8px;
+  --border-radius: 6px;
+
+  /* Litir */
+  --color-gold: #ffe7ae;
+  --color-gold-light: #fff1cf;
+  --color-dark: #2f0505;
+  --color-light: #fff9ee;
+
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-family-base: 'Noto Sans Display', Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Lora', Georgia, serif;
+}
+
+/* Almennt */
+
+/** Skilgreininar sem gilda fyrir allt efni og nota type selectora **/
+
+html,
+input,
+select,
+button {
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  --font-family: var(--font-family-heading);
+}
+
+a {
+  color: inherit;
+  background-color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/** Hjálpar class sem felur sjónrænt en skjálesarar lesa **/
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Layout */
+
+.wrapper {
+  /** Þessi selector er utanum allt og ætti að stýra plássi á milli efnis **/
+  margin-bottom: 1rem;
+}
+
+/** Haus **/
+
+.header {
+}
+
+.header header {
+}
+
+/** Valmynd **/
+
+.navigation {
+}
+
+.navigation ul {
+}
+
+/** Meginmál **/
+
+.main {
+}
+
+/** Fótur **/
+
+.footer {
+}
+
+.footer ul {
+  list-style: none;
+}
+
+/* Box! */
+
+boxes {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ffe7ae;
+}
+
+.boxes .box {
+  display: inline-flex;
+
+  margin-bottom: 1rem;
+  margin-right: 1%;
+  width: 48%;
+
+  vertical-align: top;
+}
+
+/** Og fleiri selectorar... **/
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+
+/*** Matseðill ***/
+
+table {
+  margin-bottom: 1rem;
+  border-spacing: 0;
+}
+
+table th,
+table td {
+  padding: 0.5rem;
+}
+
+table tbody tr:nth-child(2n + 1) {
+  background-color: #ffe7ae;
+}
+
+/*** Pöntunarform ***/
+
+fieldset {
+  margin-bottom: 1rem;
+  border: 1px solid #ffe7ae;
+  padding: 1rem;
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
+fieldset div {
+  margin-bottom: 1rem;
+}
+
+fieldset div label {
+  display: block;
+}
+
+fieldset input,
+fieldset select,
+fieldset textarea {
+  padding: 0.5rem;
+}
+
+fieldset input[type='checkbox'] {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+form button {
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+/*** Opnunartími ***/
+
+/**
+Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
+**/
+
+/* Matseðill */
+
+/**
+Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
+**/
+
+/* Pöntunarform */
+
+/**
+Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
+**/

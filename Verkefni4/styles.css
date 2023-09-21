@@ -1,0 +1,310 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Leturgerðir */
+
+/** Hér skal skilgreina leturgerðir **/
+
+/* Stillingar */
+
+:root {
+  /* Grunn bilið okkar er 1rem == 16px */
+  --font-base-body-px: 16px;
+  --spacing: 1rem;
+
+  /* Hámarksbreidd á efni */
+  --max-width: 900px;
+
+  /* Border breiddir */
+  --border-small: 1px;
+  --border-large: 8px;
+  --border-radius: 6px;
+
+  /* Litir */
+  --color-gold: #ffe7ae;
+  --color-gold-light: #fff1cf;
+  --color-dark: #2f0505;
+  --color-light: #fff9ee;
+
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-family-base: 'Noto Sans Display', Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Lora', Georgia, serif;
+}
+
+/*** Almennt ***/
+
+html,
+input,
+select,
+button {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+}
+
+a {
+  color: inherit;
+}
+
+
+h1
+h2,
+h3,
+ {
+  font-family: var(--font-family-heading);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: var(--font-family-base);
+  margin-bottom: var(--spacing);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+section h2  {
+  margin-bottom: var(--spacing);
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+
+
+  display: flex;
+  flex-direction: column;
+}
+/*** Haus ***/
+
+header {
+  padding-bottom: var(--spacing);
+
+display:flex;
+
+align-items: center;
+flex-direction: column;
+
+  background-color: #2f0505;
+  color: #fff1cf;
+
+ 
+  }
+
+/*** Valmynd ***/
+
+nav {
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  background-color: #fff9ee;
+  color: #2f0505;
+  border-bottom: 8px solid #ffe7ae;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+
+/*** Meginmál ***/
+
+main {
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+/*** Fótur ***/
+
+footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 8px solid #ffe7ae;
+
+  background-color: #2f0505;
+  color: #fff1cf;
+
+  display: flex;
+  flex-direction: row;
+
+justify-content:center
+}
+
+footer > section {
+margin: var(--spacing);
+flex-direction: column;
+display: flex;
+align-items: center;
+
+}
+
+
+
+
+
+footer ul, footer dl {
+display: flex;
+flex-direction: column;
+align-items: center;
+  list-style: none;
+
+
+}
+
+/*** Box! ***/
+
+.boxes {
+  margin-bottom: var(--spacing);
+  padding-bottom: var(--spacing);
+flex: 1;
+
+
+}
+
+.boxes .box {
+
+  display: flex;
+  margin-bottom: 2rem;
+  margin-right: var(--spacing);
+
+  background-color: var(--color-gold);
+  flex-direction: column;
+
+
+  
+  padding: 0.5rem;
+  flex: 1;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+.stretch  {
+  align-items: stretch;
+}
+
+.boxes .box a {
+
+  margin-top: 1rem;
+  font-weight: bold;
+
+}
+
+.boxes .box h3 {
+  border-bottom: var(--border-small) solid var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+
+
+/*** Opnunartími ***/
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+
+/*** Matseðill ***/
+
+table {
+  margin-bottom: 1rem;
+  border-spacing: 0;
+}
+
+table th,
+table td {
+  padding: 0.5rem;
+}
+
+table tbody tr:nth-child(2n + 1) {
+  background-color: #ffe7ae;
+}
+
+/*** Pöntunarform ***/
+
+fieldset {
+  margin-bottom: 1rem;
+  border: 1px solid #ffe7ae;
+  padding: 1rem;
+}
+
+fieldset legend {
+  font-weight: bold;
+}
+
+fieldset div {
+  margin-bottom: 1rem;
+}
+
+fieldset div label {
+  display: block;
+}
+
+fieldset input,
+fieldset select,
+fieldset textarea {
+  padding: 0.5rem;
+}
+
+fieldset input[type='checkbox'] {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+form button {
+  padding: 0.25rem;
+  border-radius: 6px;
+}
